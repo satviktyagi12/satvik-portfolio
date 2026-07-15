@@ -42,11 +42,14 @@ export default function Projects() {
               "Next.js",
               "TypeScript",
               "Tailwind CSS",
-              "Prisma",
+              "Express",
               "PostgreSQL",
+              "React",
               "Clerk",
-              "Gemini AI",
+              "Langchain",
               "Stripe",
+              "Zod",
+              "Motion"
             ].map((tech) => (
               <span
                 key={tech}
@@ -108,10 +111,14 @@ export default function Projects() {
               "React",
               "Node.js",
               "Express",
-              "MongoDB",
+              "PostgreSQL",
               "Clerk",
               "Inngest",
               "Tailwind CSS",
+              "TypeScript",
+              "NodeMailer",
+              "Prisma",
+              "Axios",
             ].map((tech) => (
               <span
                 key={tech}
