@@ -1,77 +1,36 @@
 "use client";
 
-import Link from "next/link";
-import { Menu } from "lucide-react";
-import { useState } from "react";
-
-const links = [
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
+const navItems = [
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Achievements", href: "#achievements" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
-
   return (
-    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-black/60 border-b border-white/10">
-      <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <Link
+    <header className="fixed top-0 left-0 w-full z-50 border-b border-gray-800 bg-black/80 backdrop-blur-md">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <a
           href="/"
-          className="text-2xl font-bold tracking-wide text-white"
+          className="text-2xl font-bold text-cyan-400 hover:text-cyan-300 transition"
         >
           Satvik Tyagi
-        </Link>
+        </a>
 
-        <div className="hidden md:flex items-center gap-8">
-          {links.map((link) => (
+        <div className="flex items-center gap-6">
+          {navItems.map((item) => (
             <a
-              key={link.name}
-              href={link.href}
-              className="text-gray-300 hover:text-white transition"
+              key={item.label}
+              href={item.href}
+              className="text-gray-300 transition hover:text-cyan-400"
             >
-              {link.name}
+              {item.label}
             </a>
           ))}
-
-          <a
-            href="/resume/resume.pdf"
-            className="px-5 py-2 rounded-full bg-white text-black font-semibold hover:scale-105 transition"
-          >
-            Resume
-          </a>
         </div>
-
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden text-white"
-        >
-          <Menu size={28} />
-        </button>
       </nav>
-
-      {open && (
-        <div className="md:hidden bg-black border-t border-white/10">
-          {links.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="block px-6 py-4 text-gray-300 hover:text-white"
-            >
-              {link.name}
-            </a>
-          ))}
-
-          <a
-            href="/resume/resume.pdf"
-            className="block px-6 py-4 text-white font-semibold"
-          >
-            Resume
-          </a>
-        </div>
-      )}
     </header>
   );
 }

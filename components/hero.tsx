@@ -42,9 +42,13 @@ export default function Hero() {
             View Projects
           </a>
 
-            <button className="rounded-xl border border-gray-700 px-7 py-3 font-semibold hover:border-cyan-400">
-              Download Resume
-            </button>
+          <a
+            href="/resume/resume.pdf"
+            download
+            className="rounded-xl border border-gray-700 px-7 py-3 font-semibold hover:border-cyan-400"
+          >
+            Download Resume
+          </a>
 
           </div>
 

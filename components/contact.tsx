@@ -29,7 +29,7 @@ export default function Contact() {
   
             <p>
               <span className="font-semibold">LinkedIn:</span>{" "}
-              linkedin.com/in/satvik-tyagi-5a0121323
+              linkedin.com/in/connect-w-satviktyagi
             </p>
   
           </div>

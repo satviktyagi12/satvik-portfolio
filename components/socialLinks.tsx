@@ -12,7 +12,7 @@ export default function SocialLinks() {
       </a>
 
       <a
-        href="https://linkedin.com/in/satvik-tyagi-5a0121323"
+        href="https://linkedin.com/in/connect-w-satviktyagi"
         target="_blank"
         className="text-gray-400 hover:text-white transition text-2xl"
       >
